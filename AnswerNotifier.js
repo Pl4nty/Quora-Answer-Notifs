@@ -6,15 +6,15 @@ const delay = require('delay'); //C++ sleep wrapper, available from https://www.
 const Discord = require('discord.js'); //Discord API JavaScript wrapper, available from https://www.npmjs.com/package/discord.js
 
 const client = new Discord.Client(); //Declare Discord bot object
-client.login("MzcyMjM0MjA4NzAzMTUyMTMw.DNBN3g.t82kPP9qYYCRYZhP3qBN6brnPGc"); //Authenticate to Discord API with bot token
+client.login(); //Authenticate to Discord API with bot token
 //Bot's invite url is https://discordapp.com/oauth2/authorize?client_id=372234208703152130&scope=bot&permissions=0
 
 //Declare global arrays
-var usernames = ["Thomas Plant"]; //for usernames in output messages #remove this by adding string processing to users[]
-var users = ["Thomas-Plant-1"]; //Quora username endpoints from each user's profile
+var usernames = [{usernames_here}]; //for usernames in output messages #remove this by adding string processing to users[] eg "Thomas Plant"
+var users = [profile_url_endpoint_here]; //Quora username endpoints from each user's profile eg "Thomas-Plant-1"
 var answerCounts = []; //caches answer counts to be compared against live answer count and determine if a change occurred
 var i = 0; //couldn't think of a better name for it
-var channel = "365402711547445248"; //ID of Discord channel to post in
+var channel = {channel_id_here}; //ID of Discord channel to post in
 //Bot must be added with the invite URL (see line 8), right-click on the channel and click "Copy ID"
 
 //Populate answerCounts with 0s to detect 1st-time run
